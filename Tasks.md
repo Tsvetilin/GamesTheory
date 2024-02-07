@@ -73,13 +73,13 @@ $$\begin{cases} P(\overline{x},1) = v \\ P(\overline{x},2) = v \\ \overline{x_1}
 
 ###### Пример 6
 
-$$\text{  }\text{  }\begin{pmatrix} 0 & 1 & -2 \\ -1 & 0 & 3 \\ 2 & -3 & 0 \end{pmatrix} \begin{matrix} 2 \\ \underline{-1} \\ 3  \end{matrix} \\ \begin{matrix} 2 &&  \underline{1} & & 3\end{matrix}$$
+$$\text{  }\text{  }\begin{pmatrix} 0 & 1 & -2 \\ -1 & 0 & 3 \\ 2 & -3 & 0 \end{pmatrix} \begin{matrix} -2 \\ \underline{-1} \\ -3  \end{matrix} \\ \begin{matrix} 2 &&  \underline{1} & & 3\end{matrix}$$
 
 Няма равновесие в чисти стратегии. Понеже играта е симетрична, търсим равновесие от вида $(x,x)$ и знаем че цената е $0$, заради симетричността.
 
 Първо гледаме дали е възможно да има стратегия, която със сигурност не играем($x_i=0$)
 
-Нека без ограниечение на общността $$\begin{cases} \overline{x_3} = 0 \\ \overline{x_1} \gt 0 \\ \overline{x_2} \gt 0 \end{cases} \Longrightarrow \begin{cases} P(1,\overline{x}) = 0 \\ P(2,\overline{x}) = 0 \end{cases} \Longleftrightarrow \begin{cases} 0\overline{x_1} + 1\overline{x_2} - 2\overline{x_3} = 0 \\ -\overline{x_1} + 0\overline{x_2} + 3\overline{x_3} = 0 \end{cases} \Longleftrightarrow  \begin{cases} \overline{x_1} = 0 \\ \overline{x_2} =0 \\ \overline{x_3} = 0 \end{cases}$$
+Нека без ограниечение на общността $$\begin{cases} \overline{x_3} = 0 \\ \overline{x_1} \gt 0 \\ \overline{x_2} \gt 0 \end{cases} \Longrightarrow \begin{cases} P(1,\overline{x}) = 0 \\ P(2,\overline{x}) = 0 \end{cases} \Longleftrightarrow \begin{cases} 0\overline{x_1} + 1\overline{x_2} - 2\overline{x_3} = 0 \\ -\overline{x_1} + 0\overline{x_2} + 3\overline{x_3} = 0 \\ \overline{x_1} + \overline{x_2} + \overline{x_3} = 1 \end{cases} \Longleftrightarrow  \begin{cases} \overline{x_1} = 0 \\ \overline{x_2} =0 \\ \overline{x_3} = 0 \end{cases}$$
 
 Следователно, този случай не е възможен и гледаме да няма нито един $x_i=0$
 
@@ -155,7 +155,7 @@ $$A=\begin{pmatrix} 1 & \underline{7} & \underline{3} \\ \underline{4} & 5 & 1 \
 
 Първият играч има 2 стратегии $x=(x_1,x_2)$, а вторията има 3 стратегии $y=(y_1,y_2,y_3)$
 
-Затова параметризираме по $х$ и избираме $x_2$. Тогава на чертеж слагаме стойностите от матрицата $B$, тоест $Q(x,j)$
+Затова параметризираме по $х$ и избираме $x_2$. Тогава на чертеж слагаме стойностите от матрицата $B$, тоест $Q(x,j)$. Винаги гледаме линията най-отгоре и разглеждаме всички точки и интервали, ограничени от точките.
 
 Нагледно:
 
@@ -190,7 +190,7 @@ $$A=\begin{pmatrix} 1 & \underline{7} & \underline{3} \\ \underline{4} & 5 & 1 \
 
 Когато имаме две матрици, винаги по матрицата на първия играч търсим max по стълбове, а по матрицата на втория играч max по редове
 
-$$A=\begin{pmatrix} \underline{5} & 0 \\ 3 & 3 \\ 0 & \underline{5} \end{pmatrix} , B = \begin{pmatrix}  1 & \underline{2} \\ 3 & \underline{4} \\ \underline{4} & 1 & \end{pmatrix}$$
+$$A=\begin{pmatrix} \underline{5} & 0 \\ 3 & 3 \\ 0 & \underline{5} \end{pmatrix} , B = \begin{pmatrix}  1 & \underline{2} \\ 3 & \underline{4} \\ \underline{4} & 1 \end{pmatrix}$$
 
 Нямаме равновесие в чисти стратегии.
 
@@ -301,9 +301,9 @@ $$\begin{pmatrix} (2,1) & (-1,-1) \\ (-1,-1) & (1,2) \end{pmatrix}$$
 Искаме да направим (0,1)-нормализация на играта
 
 За целта ползваме следните две формули:
-- $r = \dfrac{1}{u(N)-\sum_{i \in N} u(\{i\})}$
+- $r = \dfrac{1}{u(N)-\sum\limits_{i \in N} u(\{i\})}$
 - $\alpha_i = - u(\{i\}) \cdot r$
-- $v(S) = r\cdot u(S) + \sum_{i \in S} \alpha_i$
+- $v(S) = r\cdot u(S) + \sum\limits_{i \in S} \alpha_i$
 
 За конкретната задача, имаме:
 
@@ -341,7 +341,7 @@ $$\begin{pmatrix} (2,1) & (-1,-1) \\ (-1,-1) & (1,2) \end{pmatrix}$$
 За да намерим ядрото, винаги разглеждаме геометричния обект, зададен като сума на измеренията и равен на $v(N)$. В този случай имаме $N=3$ затова сме в 3d и разглеждаме равнина. След това за всеки компонент образуван от сбора на измеренията на коалицията $S$ слагаме ограничения да е по-голям от $v(S)$
 
 Имаме, че 
-$\begin{array}{lcl} C(v)=\{(x_1,x_2,x_3) \in \mathbb{R}^3 & | & x_1+x_2+x_3=8,  \\ &  & x_1\geq 1, x_2 \geq 0, x_3 \geq 1, \\ && x_1+x_2 \geq 4 \Rightarrow x_3 \leq 5 \\ && x_1+x_3 \geq 3 \Rightarrow x_2 \leq 5 \\ && x_2+x_3 \geq 5 \Rightarrow x_1 \leq 3 \} \end{array}$
+$\begin{array}{lcl} C(v)=\{(x_1,x_2,x_3) \in \mathbb{R}^3 & | & x_1+x_2+x_3=8,  \\ &  & x_1\geq 1, x_2 \geq 0, x_3 \geq 1, \\ && x_1+x_2 \geq 4 \Rightarrow x_3 \leq 4 \\ && x_1+x_3 \geq 3 \Rightarrow x_2 \leq 5 \\ && x_2+x_3 \geq 5 \Rightarrow x_1 \leq 3 \} \end{array}$
 
 На чертеж - в равнината $ x_1+x_2+x_3=8 $:
 <img src="./Task10.png" />
@@ -353,7 +353,7 @@ $\begin{array}{lcl} C(v)=\{(x_1,x_2,x_3) \in \mathbb{R}^3 & | & x_1+x_2+x_3=8,  
 
 Търсим ядрото на играта.
 
-Ядрото се определя от системата $\begin{cases} x_1+x_2+x_3=1\\ x_1 + x_2 \geq 1 \\ x_1+x_3 \geq 1 \\ x_2 + x_3 \geq 1 \\ x_1,x_2,x_3 \geq 0 \end{cases} \longrightarrow \text{несъвместима}$
+Ядрото се определя от системата $\begin{cases} x_1+x_2+x_3=1\\ x_1 + x_2 \geq 1 \\ x_1+x_3 \geq 1 \\ x_2 + x_3 \geq 1 \end{cases} \longrightarrow \text{несъвместима}$
 
 Тоест ядрото е празно и всяка делба е доминируема. Това означава, че играта няма решение. 
 
@@ -377,7 +377,7 @@ $y=(\frac{1}{6},\frac{1}{6},\frac{1}{6},\frac{1}{4},\frac{1}{4})$
 
 Първо да кажем, че за да е делба един вектор $x$ на игра с $N=\{1,\dots, n \}$ в (0,1)-нормализация трябва:
 - $x_i \geq 0$
-- $\sum_{i=1}^{n} x_i = 1$
+- $\sum\limits_{i=1}^{n} x_i = 1$
 
 За конкретния случай, двата вектора са делби.
 Също така покомпонентно като сравняваме, стигаме до извода, че:
