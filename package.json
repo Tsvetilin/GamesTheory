@@ -1,0 +1,16 @@
+{
+  "name": "games-theory",
+  "version": "1.0.0",
+  "description": "Games theory course notes and tasks written in LaTeX and Markdown syntax",
+  "main": "index.js",
+  "scripts": {
+    "start" : "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tsvetilin Tsvetilov",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "crossnote": "^0.9.7",
+    "dotenv": "^16.4.5"
+  }
+}
