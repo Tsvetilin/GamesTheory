@@ -24,6 +24,7 @@ npm start
 #### How to contribute:
 - Fork the repository
 - Make your changes in the `source` directory
+- Create an `.env.local` file in the root directory and add the absolute path to the root directory of the repository as `NOTEBOOK` variable
 - Run `npm install` to download the dependencies
 - Run `npm start` to build the notes
 - Update the `README.md` file if necessary
